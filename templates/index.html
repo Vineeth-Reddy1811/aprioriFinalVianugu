@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploading files</title>
+	<style>
+    body {  background-image: url(WallPaper.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #000000;}
+    </style>
+</head>
+<body>
+	  <header>
+	    <h2 style="text-align: center; color:#cccccc">Course Project Cis 550</h2>
+	  </header>
+      <h4 style=" text-align: center; color: #cccccc "> Please select an CSV file </h4>
+        <form style=" text-align: center; color: #cccccc " action = "/Output" method = "POST" enctype = "multipart/form-data">
+        <input type = "file" name = "file" />
+        <br><br>
+
+		<label for="min_sup">Enter Minimum support value:</label> <br>
+		<input type="text" id="min_sup" name="min_sup"><br><br>
+        <input type = "submit"/>
+        <input type = "reset"/>
+      </form>
+</body>
+</html>
