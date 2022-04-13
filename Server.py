@@ -75,7 +75,7 @@ def apriori_gen(frequent_items, k):
     return C_k
 
 
-def find_frequent_itemset(D, min_sup):              #finding the first level of frequent items.
+def find_frequent_1_itemset(D, min_sup):              #finding the first level of frequent items.
     C_1 = []
     for transaction in D:
         for item in transaction:
@@ -86,7 +86,7 @@ def find_frequent_itemset(D, min_sup):              #finding the first level of 
     return L_1
 
 def apriori(D, min_sup):
-    L = [set(find_frequent_itemset(D, min_sup))]                #find all the level 1 frequent item sets satistying minsup
+    L = [set(find_frequent_1_itemset(D, min_sup))]                #find all the level 1 frequent item sets satistying minsup
     k = 1
     while len(L[k - 1]) > 0:
         C_k = apriori_gen(L[k - 1], k - 1)
